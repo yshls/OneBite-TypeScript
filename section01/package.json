@@ -10,5 +10,8 @@
   "description": "",
   "dependencies": {
     "@types/node": "^24.0.10"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3"
   }
 }
