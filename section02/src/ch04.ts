@@ -31,3 +31,21 @@ let user2: User = {
   bio: 'ALICE IS A SOFTWARE ENGINEER',
   locaioin: 'seoul',
 };
+
+//  인덱스 시그니처=> 키랑 밸류의 규칙을 기준으로 객체의 type을 정의할 수 있는 문법
+type CountryCodes = {
+  [key: string]: string;
+};
+let countryCodes: CountryCodes = {
+  Korea: 'ko',
+  UnitedStates: 'us',
+  UnitedKingdom: 'UK',
+};
+
+type CountryNumberCodes = {
+  // 이 규칙을 위반하지 않으면 모든 객체를 허용한다.
+  [key: string]: number;
+  Korea: number;
+};
+
+let countryNumberCodes = { Korea: 82 };
