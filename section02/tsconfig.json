@@ -5,6 +5,7 @@
     "module": "ESNext",
     "outDir": "dist",
     "strict": true,
+    // "strictNullChecks": false, // 엄격한 null 검사
     "moduleDetection": "force"
   },
   "ts-node": {
