@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "ESNext", // 변환될 자바스크립트의 버전 (최신 버전 사용)
+    "module": "ESNext", // 변환될 모듈 시스템 (import/export 문법 사용)
+    "outDir": "dist", // 컴파일된 자바스크립트 파일이 저장될 폴더
+    "strict": true, // 엄격한 타입 검사 모드 활성화 (권장)
+    "moduleDetection": "force", // 모든 파일을 독립 모듈로 취급 (전역 스코프 충돌 방지)
+    "skipLibCheck": true // 외부 라이브러리 파일(.d.ts)의 타입 검사 생략 (속도 향상)
+  },
+
+  "include": ["src"] // 컴파일할 소스 코드가 위치한 폴더 범위 지정
+}
