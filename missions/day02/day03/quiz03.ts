@@ -4,7 +4,7 @@
  * 아래 정답 체크 영역의 오류가 사라져야 합니다!
  */
 
-type User = { name: string; email: string; extra1: string; extra2: string };
+type User = { name: string; email: string; [key: string]: string };
 
 /**
  * [ 정답 체크 ]
