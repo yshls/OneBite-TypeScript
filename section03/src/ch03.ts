@@ -1,40 +1,64 @@
 /**
-unknwon 타입 -> 전체 집합
-*/
+기본 타입 간의 호환성 */
 
-function unknownExam() {
-  let a: unknown = 1; // number -> unknown
-  let b: unknown = 'hello'; // string -> unknown
-  let c: unknown = () => {}; // function -> unknown
+let num1: number = 10;
+let num2: 10 = 10;
 
-  let unknwon: unknown;
-  //   let num: number = unknownVar;
-}
+num1 = num2;
 
-// never
-function neverExam() {
-  function neverFunc() {
-    while (true) {}
-  }
+/**
+객체 타입 간의 호환성 -> 어떤 객체 탕비을 다른 객체 타입으로 취급해도 괜찬 */
+type Animal = {
+  name: string;
+  color: string;
+};
 
-  //   let num: number = neverFunc();
-  //   let str: string = neverFunc();
+type Dog = {
+  name: string;
+  color: string;
+  breed: string;
+};
 
-  //   let never1: never = 10;
-}
+let animal: Animal = {
+  name: '기린',
+  color: 'yellow',
+};
 
-// void
-function voidExam() {
-  function voidFunc() {
-    console.log('hi');
-  }
+let dog: Dog = {
+  name: '돌돌이',
+  color: 'brown',
+  breed: '진도',
+};
 
-  let voidVar: void = undefined;
-}
+animal = dog;
 
-function anyExam() {
-  let unknwon: unknown;
-  let anyVar: any;
+type Book = {
+  name: string;
+  price: number;
+};
 
-  //   anyVar = unknwonVar;
-}
+type ProgrammingBook = {
+  name: string;
+  price: number;
+  skill: string;
+};
+
+let book: Book;
+let ProgrammingBook: ProgrammingBook = {
+  name: '한 입 크기로 잘라먹는 리액트',
+  price: 33000,
+  skill: 'reactjs',
+};
+
+let book2: Book = {
+  name: '한 입 크기로 잘라먹는 리액트',
+  price: 33000,
+  //   skill: 'reactjs',
+};
+
+let book3: Book = ProgrammingBook;
+// function({
+//       name: '한 입 크기로 잘라먹는 리액트',
+//   price: 33000,
+// //   skill: 'reactjs',
+// })
