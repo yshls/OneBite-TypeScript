@@ -8,15 +8,11 @@
 // value => string: toUpperCase
 // value => Date: getTime
 type Person = {
-  name: 'string';
+  name: string;
   age: number;
 };
 
-function func(value: number | string | Date | null) {
-  value;
-
-  //   value.toUpperCase();
-  //   value.toFixed();
+function func(value: number | string | Date | null | Person) {
   if (typeof value === 'number') {
     console.log(value.toFixed());
   } else if (typeof value === 'string') {
