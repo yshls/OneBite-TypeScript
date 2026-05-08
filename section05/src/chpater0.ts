@@ -19,12 +19,12 @@ interface IPerson {
 // person.sayHi();
 // person.sayHi(1, 2);
 
-type Type1 = number | string | Person;
-type Type2 = number & string & Person;
+// type Type1 = number | string | Person;
+// type Type2 = number & string & Person;
 
-const person: Person | number = {
-  name: '이정환',
-  sayHi: function () {
-    console.log('Hi');
-  },
-};
+// const person: Person | number = {
+//   name: '이정환',
+//   sayHi: function () {
+//     console.log('Hi');
+//   },
+// };
